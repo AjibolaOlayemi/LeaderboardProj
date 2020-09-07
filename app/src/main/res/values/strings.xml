@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">Leaderboard</string>
+    <string name="btn_submit">Submit</string>
+    <string name="skill_iq_leaders" > Skill Iq Leaders </string>
+    <string name="learning_leaders" > Learning Leaders </string>
+    <string name="textview_iq_leader_name" />
+    <string name="textview_iq_score" />
+    <string name="iqScoreAndLocation" />
+    <string name="textview_learning_leader">23</string>
+    <string name="learning_hours">233</string>
+</resources>
