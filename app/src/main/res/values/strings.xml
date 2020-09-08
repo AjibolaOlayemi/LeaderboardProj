@@ -8,4 +8,9 @@
     <string name="iqScoreAndLocation" />
     <string name="textview_learning_leader">23</string>
     <string name="learning_hours">233</string>
+    <string name="leaderboard_title">LEADERBOARD</string>
+    <string name="learning_badge_for_gads_learners">learning badge for gads learners</string>
+    <string name="textview_country" />
+    <string name="textview_learning_leader_name" />
+    <string name="textview_learning_hours" />
 </resources>
