@@ -14,11 +14,14 @@ import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+
 public class FragmentLearner extends Fragment {
 
     View v ;
     private RecyclerView mRecyclerView;
     private List<LearnerLeaderboard> mLearnerLeaderboardList;
+    private RecyclerView.LayoutManager mLayoutManager;
+    private RecyclerViewAdapter mRecyclerViewAdapter;
 
     public FragmentLearner(){}
 
@@ -29,8 +32,15 @@ public class FragmentLearner extends Fragment {
         v =  inflater.inflate(R.layout.learner_leaderboard_fragment, container, false);
         mRecyclerView= v.findViewById(R.id.learner_leaderboard_recyclerview);
         RecyclerViewAdapter recyclerViewAdapter = new RecyclerViewAdapter(mLearnerLeaderboardList, getContext());
-        mRecyclerView.setLayoutManager(new LinearLayoutManager(getActivity()));
+
+        mLayoutManager = new LinearLayoutManager(getActivity());
+
+        mRecyclerView.setLayoutManager(mLayoutManager);
         mRecyclerView.setAdapter(recyclerViewAdapter);
+
+
+       // mRecyclerView.setLayoutManager(mLayoutManager);
+
         return v;
     }
 

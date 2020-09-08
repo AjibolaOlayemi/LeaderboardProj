@@ -40,6 +40,7 @@ public class MainActivity extends AppCompatActivity {
     private Toolbar toolbar;
     private RecyclerView mRecyclerView;
     private RecyclerViewAdapter mRecyclerViewAdapter;
+    private RecyclerView.LayoutManager mLayoutManager;
 
     private List<LearnerLeaderboard> mLearnerLeaderboardList;
 
@@ -65,7 +66,7 @@ public class MainActivity extends AppCompatActivity {
         tabLayout.setupWithViewPager(viewPager);
 
 
-        mRecyclerView= findViewById(R.id.learner_leaderboard_recyclerview);
+
        // mRecyclerView.setLayoutManager(new LinearLayoutManager(this));
 
 
