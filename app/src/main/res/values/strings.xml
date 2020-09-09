@@ -1,8 +1,8 @@
 <resources>
     <string name="app_name">Leaderboard</string>
     <string name="btn_submit">Submit</string>
-    <string name="skill_iq_leaders" > Skill Iq Leaders </string>
-    <string name="learning_leaders" > Learning Leaders </string>
+    <string name="skill_iq_leaders"> Skill Iq Leaders </string>
+    <string name="learning_leaders"> Learning Leaders </string>
     <string name="textview_iq_leader_name" />
     <string name="textview_iq_score" />
     <string name="iqScoreAndLocation" />
@@ -10,7 +10,13 @@
     <string name="learning_hours">233</string>
     <string name="leaderboard_title">LEADERBOARD</string>
     <string name="learning_badge_for_gads_learners">learning badge for gads learners</string>
-    <string name="textview_country" />
-    <string name="textview_learning_leader_name" />
-    <string name="textview_learning_hours" />
+    <string name="textview_country">Naija</string>
+    <string name="textview_learning_leader_name">aji</string>
+    <string name="textview_learning_hours">56</string>
+    <string name="project_on_github_link">Project on GITHUB(link)</string>
+    <string name="email_address">Email Address</string>
+    <string name="last_name">Last Name</string>
+    <string name="first_name">First Name</string>
+    <string name="project_submission">Project Submission</string>
+    <string name="btn_submit2">Submit</string>
 </resources>

@@ -51,9 +51,6 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
                 .apply(RequestOptions.centerCropTransform()).into(holder.img);
 
 
-
-
-
     }
 
     @Override
@@ -61,12 +58,20 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
         return mLearnerLeaderboardList.size();
     }
 
+    public void loadLeaderboardList(List<LearnerLeaderboard>mLearnerLeaderboardList) {
+        this.mLearnerLeaderboardList.clear();
+        if (mLearnerLeaderboardList != null) {
+            mLearnerLeaderboardList.addAll(mLearnerLeaderboardList);
+        }
+        notifyDataSetChanged();
+    }
+
     public static class MyViewHolder extends RecyclerView.ViewHolder{
 
-        private TextView tv_name;
-        private TextView tv_hours;
-        private TextView tv_country;
-        private ImageView img;
+        TextView tv_name;
+        TextView tv_hours;
+        TextView tv_country;
+        ImageView img;
 
         public MyViewHolder(@NonNull View itemView) {
             super(itemView);

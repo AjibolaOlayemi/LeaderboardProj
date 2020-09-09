@@ -17,6 +17,15 @@
         android:id="@+id/toolbar"
         app:titleTextColor="@color/colorAccent"
         android:minHeight="?actionBarSize">
+        <Button
+            android:layout_width="120dp"
+            android:layout_height="30dp"
+            android:background="@drawable/btn_rounded"
+            android:text="@string/btn_submit"
+            android:id="@+id/btn_submit"
+            android:layout_marginLeft="110dp"
+            android:layout_marginStart="110dp"
+            android:onClick="openSubmitActivity"/>
 
     </androidx.appcompat.widget.Toolbar>
 
