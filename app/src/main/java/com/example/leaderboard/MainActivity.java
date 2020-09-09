@@ -46,6 +46,7 @@ public class MainActivity extends AppCompatActivity {
     private RecyclerView.LayoutManager mLayoutManager;
 
 
+    // this is for content  of the skill fragment
     private List<LearnerLeaderboard> mLearnerLeaderboardList;
     private List<SkillIqLeaderboard> skillIqLeaderboard;
     private static String JSON_URL="https://gads.api.herokuapp.com/api/skilliq";
@@ -76,10 +77,14 @@ public class MainActivity extends AppCompatActivity {
         mLearnerLeaderboardList= new ArrayList<>();
         loadRecyclerViewData();
 
+        //this section is to display the Skills fragment content
         skillRV=findViewById(R.id.skill_leaders);
         skillIqLeaderboard=new ArrayList<>();
 
         extractSkillLeadersScore();
+//        skillRV.setLayoutManager(new LinearLayoutManager(this));
+//        skillAdapter= new SkillAdapter(this, skillIqLeaderboard);
+//        skillRV.setAdapter(skillAdapter);
 
 
     }
@@ -125,6 +130,8 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
+
+    // this displays content in the learning leaders fragment
     private void loadRecyclerViewData() {
 
         final ProgressDialog progressDialog = new ProgressDialog(this);
