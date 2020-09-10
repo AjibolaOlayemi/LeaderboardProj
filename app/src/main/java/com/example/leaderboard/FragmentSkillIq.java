@@ -20,5 +20,6 @@ public class FragmentSkillIq extends Fragment {
 
         v = inflater.inflate(R.layout.skill_iq_fragment, container, false);
         return v;
+
     }
 }

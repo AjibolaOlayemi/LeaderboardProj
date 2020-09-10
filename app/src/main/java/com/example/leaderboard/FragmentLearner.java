@@ -4,6 +4,8 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
+import android.widget.TextView;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -22,36 +24,53 @@ public class FragmentLearner extends Fragment {
     private List<LearnerLeaderboard> mLearnerLeaderboardList;
     private RecyclerView.LayoutManager mLayoutManager;
     private RecyclerViewAdapter mRecyclerViewAdapter;
+    TextView learner_name;
+    TextView learner_hours;
+    TextView learner_country;
+    ImageView learner_badge;
 
     public FragmentLearner(){}
 
-    @Nullable
-    @Override
-    public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
 
-        v =  inflater.inflate(R.layout.learner_leaderboard_fragment, container, false);
-        mRecyclerView= v.findViewById(R.id.learner_leaderboard_recyclerview);
-        RecyclerViewAdapter recyclerViewAdapter = new RecyclerViewAdapter(mLearnerLeaderboardList, getContext());
-
-        mLayoutManager = new LinearLayoutManager(getActivity());
-
-        mRecyclerView.setLayoutManager(mLayoutManager);
-        mRecyclerView.setAdapter(recyclerViewAdapter);
-
-
-       // mRecyclerView.setLayoutManager(mLayoutManager);
-
-        return v;
-    }
 
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
+
+
+//        mRecyclerView= v.findViewById(R.id.learner_leaderboard_recyclerview);
+//        RecyclerViewAdapter recyclerViewAdapter = new RecyclerViewAdapter(mLearnerLeaderboardList, getContext());
+//
+//        mLayoutManager = new LinearLayoutManager(getActivity());
+//
+//        mRecyclerView.setLayoutManager(mLayoutManager);
+//        mRecyclerView.setAdapter(recyclerViewAdapter);
+//
         mLearnerLeaderboardList = new ArrayList<>();
 //        mLearnerLeaderboardList.add(new LearnerLeaderboard("Ajibola O",72,"Nigeria",""));
 //        mLearnerLeaderboardList.add(new LearnerLeaderboard("Ajibola O",72,"Nigeria",""));
 //        mLearnerLeaderboardList.add(new LearnerLeaderboard("Ajibola O",72,"Nigeria",""));
 
     }
+
+    @Nullable
+    @Override
+    public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
+
+        v =  inflater.inflate(R.layout.item_learner_leaderboard, container, false);
+
+        mRecyclerView= v.findViewById(R.id.learner_leaderboard_recyclerview);
+//
+        mRecyclerView.setLayoutManager(new LinearLayoutManager(getActivity()));
+        RecyclerViewAdapter recyclerViewAdapter = new RecyclerViewAdapter(mLearnerLeaderboardList, getContext());
+
+        mRecyclerView.setAdapter(recyclerViewAdapter);
+
+       // mRecyclerView.setLayoutManager(mLayoutManager);
+
+        return v;
+    }
+
+
 }
